@@ -81,6 +81,9 @@ resource "azurerm_container_group" "ci" {
   resource_group_name = azurerm_resource_group.rg.name
   ip_address_type     = "Public"
   os_type             = "Linux"
+  depends_on = [
+    azurerm_mysql_flexible_database.db
+  ]
 
   container {
     name   = var.prefix
