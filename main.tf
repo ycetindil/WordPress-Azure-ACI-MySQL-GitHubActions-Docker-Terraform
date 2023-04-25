@@ -81,7 +81,7 @@ resource "azurerm_container_group" "ci" {
 
   container {
     name   = var.prefix
-    image  = "${var.docker_hub_username}/${var.prefix}" # Should match with the Jenkinsfile
+    image  = "${var.docker_hub_username}/${var.prefix}"
     cpu    = "0.5"
     memory = "1.5"
 

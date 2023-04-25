@@ -1,4 +1,5 @@
 variable "prefix" {
+  description = "Should match with the GitHubActions file"
   default = "wordpress"
 }
 
